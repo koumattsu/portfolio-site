@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo管理表 | Koshi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1 class="editable-title" contenteditable="true">タスク・ToDo管理</h1>
+        <p class="subtitle">学習・開発タスクをまとめておくボード（ローカル保存）</p>
+      </div>
+      <div class="legend">
+        <span class="badge status-progress">進行中</span>
+        <span class="badge status-done">完了</span>
+        <span class="badge status-wait">未着手</span>
+      </div>
+    </header>
+
+    <div class="controls">
+      <button id="addRowBtn" class="btn add">＋ 新しいタスクを追加</button>
+      <button id="deleteSelectedBtn" class="btn delete">選択したタスクを削除</button>
+    </div>
+
+    <div class="table-wrap glass">
+      <table id="todoTable">
+        <thead>
+          <tr>
+            <th style="width:48px;"></th>
+            <th>タスク名</th>
+            <th style="width:130px;">ステータス</th>
+            <th style="width:140px;">期日</th>
+            <th style="width:120px;">優先度</th>
+            <th>説明</th>
+            <th style="width:60px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JSで挿入 -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="footer">
+      <p>※ ブラウザに保存されます（localStorage）。PCを変えると消えます。</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
