@@ -1,0 +1,310 @@
+/* --- Google Fonts & 基本設定 --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f0f1c;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-strong: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #fff;
+  --muted: rgba(255, 255, 255, 0.7);
+  --accent: #485ede;
+  --radius: 16px;
+  --inner: 1100px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #182240 0%, #0f0f1c 40%, #0b0b13 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* --- レイアウト共通 --- */
+.inner {
+  width: min(100% - 40px, var(--inner));
+  margin: 0 auto;
+}
+
+/* --- ヘッダー（上部ナビ） --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 15, 28, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-title {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-subtitle {
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: #fff;
+}
+
+/* --- ヒーロー --- */
+.hero {
+  padding: 110px 0 60px;
+}
+
+.hero .hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.hero .lead {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.hero .meta {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #485ede, #6f8aff);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 25px rgba(72, 94, 222, 0.25);
+}
+
+/* --- セクション共通 --- */
+.section {
+  padding: 70px 0 50px;
+}
+
+.section-alt {
+  background: radial-gradient(circle, rgba(255,255,255,0.015) 0%, rgba(0,0,0,0) 55%);
+}
+
+.section-title {
+  font-size: 1.9rem;
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+/* --- 自己紹介 --- */
+#about p {
+  margin-bottom: 30px;
+  color: var(--muted);
+}
+
+.profile-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  max-width: 600px;
+}
+
+.profile-list li {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.015);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.profile-list li span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  width: 110px;
+  flex: 0 0 110px;
+}
+
+/* --- スキル --- */
+.skills-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.skill-card {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: var(--radius);
+  padding: 20px 18px 18px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  border: 1px solid rgba(104, 123, 248, 0.45);
+}
+
+.skill-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.skill-card .small {
+  font-size: 0.78rem;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* --- 制作物 --- */
+.works-list {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.work-item {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.025);
+  border-radius: 14px;
+  padding: 16px 18px 14px;
+  transition: background 0.2s ease;
+}
+
+.work-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.work-item h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.work-item p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* --- お問い合わせ --- */
+#contact p {
+  max-width: 500px;
+  color: var(--muted);
+}
+
+.mail-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(72, 94, 222, 0.7);
+  padding-bottom: 2px;
+}
+
+.mail-link:hover {
+  color: #fff;
+  background: rgba(72, 94, 222, 0.3);
+  border-radius: 5px;
+  padding: 4px 9px;
+}
+
+/* --- フッター --- */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.02);
+  padding: 36px 0 50px;
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+}
+
+/* --- スクロールでふわっと出すやつ --- */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 720px) {
+  .site-header .inner {
+    flex-wrap: wrap;
+  }
+  .site-nav ul {
+    gap: 0.8rem;
+  }
+  .hero {
+    padding-top: 90px;
+  }
+  .profile-list li {
+    flex-wrap: wrap;
+  }
+  .profile-list li span {
+    width: auto;
+  }
+}

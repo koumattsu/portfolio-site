@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>こうし | ポートフォリオ</title>
+  <meta name="description" content="大阪公立大学でDeep Learningを学ぶこうしのポートフォリオサイトです。AI開発やWebアプリ制作の実践経験を紹介しています。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <div class="brand">
+        <a href="#top" class="site-title">Koshi Portfolio</a>
+        <p class="site-subtitle">Deep Learning / Web開発 / Osaka Metropolitan Univ.</p>
+      </div>
+      <nav class="site-nav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#works">works</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="inner">
+        <div class="hero-text">
+          <h1 id="hero-title">こうしのポートフォリオ</h1>
+          <p class="lead">Deep Learning と Web開発を軸に、AIで価値を生むサービスを作る練習をしています。</p>
+          <p class="meta">大阪公立大学（B1） / 天王寺高校出身</p>
+          <a class="btn primary" href="#works">制作物を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="inner">
+        <h2 class="section-title">自己紹介</h2>
+        <p>
+          大阪公立大学の1回生です。高校は天王寺高校でした。<br>
+          今は主に Deep Learning・機械学習・Web開発を中心に学習・実践しています。  
+          「AIを使って実際に役立つサービスをつくる」ことを目標にしています。
+        </p>
+        <ul class="profile-list">
+          <li><span>出身高校</span>天王寺高校</li>
+          <li><span>所属</span>大阪公立大学 B1</li>
+          <li><span>興味分野</span>AI開発 / 時系列予測 / Webアプリ設計</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="inner">
+        <h2 class="section-title">スキル</h2>
+        <p class="section-intro">AI開発を中心に、Webアプリケーションの設計・実装も行っています。</p>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <h3>ディープラーニングの基本原理</h3>
+            <p>『ゼロから作るDeep Learning』を通して、ニューラルネットワークの順伝播・逆伝播、活性化関数、損失関数といった基本原理を理解しています。</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Python</h3>
+            <p>AI開発の基盤となるPythonの文法・標準ライブラリを理解し、データ処理やモデル実装に応用できます。</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>PyTorch</h3>
+            <p>『PyTorchによる発展ディープラーニング』を通して、モデル構築、データセットの前処理、学習ループの実装などを実践。AIフレームワークとして使いこなしています。</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>時系列データ分析</h3>
+            <p>Bitcoinの値動きという「時系列データ」を対象にAI予測モデルを開発。特徴量設計・モデルチューニング・検証の一連の流れを経験しています。</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>予測モデルの構築</h3>
+            <p>データ収集、前処理、学習、推論までのプロセスを自力で構築。LightGBMやscikit-learnを使い分け、AI予測をWebアプリに組み込む実装経験があります。</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Web開発</h3>
+            <p>フロントエンド（HTML / CSS / JavaScript / React）およびバックエンド（Python / Node.js / PHP）の基礎を学習済み。FlaskやAPI連携を通じてAIモデルをWeb上で動作させる実装が可能です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="section">
+      <div class="inner">
+        <h2 class="section-title">制作物</h2>
+        <ul class="works-list">
+          <li class="work-item">
+            <h3>自己紹介ページ</h3>
+            <p>ポートフォリオページをHTML/CSS/JSで設計・実装</p>
+          </li>
+          <li class="work-item">
+            <h3>AIによるBTC価格予測・自動売買システム</h3>
+            <p>Flask × 取引所API × AIモデル（LightGBM, PyTorch）を連携。リアルタイム予測と自動注文処理を実装。</p>
+          </li>
+          <li class="work-item">
+            <h3>簡易ToDoリスト</h3>
+            <p>JavaScriptで状態管理を実装したシンプルなタスク管理アプリ。React版にも拡張予定。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="inner">
+        <h2 class="section-title">お問い合わせ</h2>
+        <p>AI・Web開発の学習仲間やインターンのお誘いなどは、下記メールよりご連絡ください。</p>
+        <p><a href="mailto:koumattsu@gmail.com" class="mail-link">koumattsu@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>&copy; 2025 こうし</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
